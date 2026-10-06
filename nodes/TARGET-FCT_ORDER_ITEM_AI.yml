@@ -1,0 +1,230 @@
+fileVersion: 1
+id: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+name: FCT_ORDER_ITEM_AI
+operation:
+  config:
+    postSQL: ''
+    preSQL: ''
+    testsEnabled: true
+  database: ''
+  deployEnabled: true
+  description: 'Order-item level sales fact (grain: ORDER_ITEM_ID)'
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 54eb8f98-ec64-479f-9276-398ec2430a41
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: ORDER_ITEM_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 2ef50f35-5a07-4cae-aeca-169a69fac8d0
+          stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        transform: '"STG_ORDER_ITEM_DETAILS_AI"."ORDER_ITEM_ID"'
+      isBusinessKey: true
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 690fb31a-2f8e-4c34-af33-6a1d57c0565d
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: ORDER_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 71c52a12-5082-447d-82e7-6388849af9c1
+          stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        transform: '"STG_ORDER_ITEM_DETAILS_AI"."ORDER_ID"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2b1237f2-90cf-4083-a011-65f5bee42bb5
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: CUSTOMER_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 7a0030dd-8b10-4380-bbaf-922c3cd92346
+          stepCounter: cf64545e-3fa6-4e1a-afa1-33e4597e7a35
+        transform: '"STG_ORDER_AI"."CUSTOMER_ID"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 02a00ecf-8552-4b8f-b1c8-f26d52b4ff4d
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: PRODUCT_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 4483432f-2a35-4a2d-87a0-1ea510cb3fb3
+          stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        transform: '"STG_ORDER_ITEM_DETAILS_AI"."PRODUCT_ID"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: c0dab0b4-50f7-4110-b87d-28b4b2e09778
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER
+      description: ''
+      name: DIM_CUSTOMER_AI_KEY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: c0cb637d-1f5f-486b-b6d0-02d73f1f0348
+          stepCounter: 88384866-2a31-44b8-92bd-17dd0a224191
+        transform: '"DIM_CUSTOMER_AI"."DIM_CUSTOMER_AI_KEY"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: f825a108-4ad7-4b69-8016-abe5a92fa347
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER
+      description: ''
+      name: DIM_PRODUCT_AI_KEY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 78ea43bf-1fae-489e-9b10-0f814c43998d
+          stepCounter: 0822e7ec-29a3-4f50-9c1d-ee9514351cae
+        transform: '"DIM_PRODUCT_AI"."DIM_PRODUCT_AI_KEY"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 87d32aa4-ead9-4a88-9bb3-3cdabd8254fd
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: DATE
+      description: ''
+      name: ORDER_DATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 48372b10-997c-4ef3-a402-22181487a504
+          stepCounter: cf64545e-3fa6-4e1a-afa1-33e4597e7a35
+        transform: '"STG_ORDER_AI"."ORDER_DATE"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 44d60222-7e0a-4042-9655-b31e2916736b
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: QUANTITY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 692d9828-6c00-41e9-a9aa-5cb5717ed07b
+          stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        transform: '"STG_ORDER_ITEM_DETAILS_AI"."QUANTITY"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: b81afade-bb61-4887-b430-78aad7c18bc2
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER(10,2)
+      description: ''
+      name: UNIT_PRICE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d25bce83-a44a-480f-a5ab-cdc9637d11af
+          stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        transform: '"STG_ORDER_ITEM_DETAILS_AI"."UNIT_PRICE"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: ea3aaca7-44dc-4083-ab10-5bad4e01a9a1
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: NUMBER(21,2)
+      description: QUANTITY * UNIT_PRICE
+      name: TOTAL_ITEM_AMOUNT
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 692d9828-6c00-41e9-a9aa-5cb5717ed07b
+          stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        - columnCounter: d25bce83-a44a-480f-a5ab-cdc9637d11af
+          stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        transform: '"STG_ORDER_ITEM_DETAILS_AI"."QUANTITY" * "STG_ORDER_ITEM_DETAILS_AI"."UNIT_PRICE"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: c602e827-1dff-410b-b180-de6c21fd1461
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: VARCHAR(30)
+      description: ''
+      name: ORDER_STATUS
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 772ad6ff-3dd8-4bc9-8cec-08898e137454
+          stepCounter: cf64545e-3fa6-4e1a-afa1-33e4597e7a35
+        transform: '"STG_ORDER_AI"."ORDER_STATUS"'
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: e683e7ca-8afd-449b-ba28-a35d0aceef83
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: TIMESTAMP
+      description: ''
+      name: SYSTEM_CREATE_DATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      isSystemCreateDate: true
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 9539911e-702b-40b0-b1c4-a35a305883ae
+        stepCounter: d75f5fc2-74c2-4564-85cf-1e3b637b9965
+      config: {}
+      dataType: TIMESTAMP
+      description: ''
+      name: SYSTEM_UPDATE_DATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      isSystemUpdateDate: true
+    cteString: ''
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases:
+        STG_ORDER_ITEM_DETAILS_AI: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+        STG_ORDER_AI: cf64545e-3fa6-4e1a-afa1-33e4597e7a35
+        DIM_PRODUCT_AI: 0822e7ec-29a3-4f50-9c1d-ee9514351cae
+        DIM_CUSTOMER_AI: 88384866-2a31-44b8-92bd-17dd0a224191
+      customSQL:
+        customSQL: ''
+      dependencies:
+      - locationName: TARGET
+        nodeName: STG_ORDER_ITEM_DETAILS_AI
+      - locationName: TARGET
+        nodeName: STG_ORDER_AI
+      - locationName: TARGET
+        nodeName: DIM_PRODUCT_AI
+      - locationName: TARGET
+        nodeName: DIM_CUSTOMER_AI
+      join:
+        joinCondition: "FROM {{ ref('TARGET', 'STG_ORDER_ITEM_DETAILS_AI') }} \"STG_ORDER_ITEM_DETAILS_AI\"\nINNER JOIN {{ ref('TARGET', 'STG_ORDER_AI') }} \"STG_ORDER_AI\"\n  ON \"STG_ORDER_ITEM_DETAILS_AI\".\"ORDER_ID\" = \"STG_ORDER_AI\".\"ORDER_ID\"\nLEFT JOIN {{ ref('TARGET', 'DIM_PRODUCT_AI') }} \"DIM_PRODUCT_AI\"\n  ON \"STG_ORDER_ITEM_DETAILS_AI\".\"PRODUCT_ID\" = \"DIM_PRODUCT_AI\".\"PRODUCT_ID\"\n  AND \"DIM_PRODUCT_AI\".\"SYSTEM_CURRENT_FLAG\" = 'Y'\nLEFT JOIN {{ ref('TARGET', 'DIM_CUSTOMER_AI') }} \"DIM_CUSTOMER_AI\"\n  ON \"STG_ORDER_AI\".\"CUSTOMER_ID\" = \"DIM_CUSTOMER_AI\".\"CUSTOMER_ID\"\n  AND \"DIM_CUSTOMER_AI\".\"SYSTEM_CURRENT_FLAG\" = 'Y'"
+      name: FCT_ORDER_ITEM_AI
+      noLinkRefs: []
+  name: FCT_ORDER_ITEM_AI
+  overrideSQL: false
+  schema: ''
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

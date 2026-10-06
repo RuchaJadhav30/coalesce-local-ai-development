@@ -1,0 +1,110 @@
+fileVersion: 1
+id: 045b7455-12ab-4b34-9dc3-076b04f12617
+name: STG_ORDER_ITEM_AI
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ''
+    preSQL: ''
+    testsEnabled: true
+    truncateBefore: true
+  database: ''
+  deployEnabled: true
+  description: Pass-through stage of ORDER_ITEMS
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 0f3a48e7-35e5-4833-ae42-528eea1371d8
+        stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: ORDER_ITEM_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 4794f95b-5989-49b5-b608-5da0e06d2108
+          stepCounter: 5d4c4705-d782-4f60-b6a0-e1acd132b38b
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 19ba52d3-da6e-40db-be5a-c1ead148accb
+        stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: ORDER_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 49588c9f-2053-45f6-bd63-97dddcdf3047
+          stepCounter: 5d4c4705-d782-4f60-b6a0-e1acd132b38b
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 6ce10f8f-6abe-4f5d-b71e-1a9488a9a266
+        stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: PRODUCT_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 63014676-0e41-4995-82f8-ff0258950720
+          stepCounter: 5d4c4705-d782-4f60-b6a0-e1acd132b38b
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 60522108-3b56-43a4-a31b-2a93b64e77a3
+        stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: QUANTITY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 42f55855-c225-414c-ade1-2721ed94f711
+          stepCounter: 5d4c4705-d782-4f60-b6a0-e1acd132b38b
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 85704915-9597-461d-b7ba-99dd60337101
+        stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+      config: {}
+      dataType: NUMBER(10,2)
+      description: ''
+      name: UNIT_PRICE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 476afa2e-4aef-4553-bec9-8a9ba2043662
+          stepCounter: 5d4c4705-d782-4f60-b6a0-e1acd132b38b
+        transform: ''
+    cteString: ''
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases:
+        ORDER_ITEMS: 5d4c4705-d782-4f60-b6a0-e1acd132b38b
+      customSQL:
+        customSQL: ''
+      dependencies:
+      - locationName: SRC
+        nodeName: ORDER_ITEMS
+      join:
+        joinCondition: FROM {{ ref('SRC', 'ORDER_ITEMS') }} "ORDER_ITEMS"
+      name: STG_ORDER_ITEM_AI
+      noLinkRefs: []
+  name: STG_ORDER_ITEM_AI
+  overrideSQL: false
+  schema: ''
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

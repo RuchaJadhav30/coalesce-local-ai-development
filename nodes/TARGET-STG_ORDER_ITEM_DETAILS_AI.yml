@@ -1,0 +1,110 @@
+fileVersion: 1
+id: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+name: STG_ORDER_ITEM_DETAILS_AI
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ''
+    preSQL: ''
+    testsEnabled: true
+    truncateBefore: true
+  database: ''
+  deployEnabled: true
+  description: Order-item detail prepared for FCT_ORDER_ITEM_AI
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2ef50f35-5a07-4cae-aeca-169a69fac8d0
+        stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: ORDER_ITEM_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 0f3a48e7-35e5-4833-ae42-528eea1371d8
+          stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 71c52a12-5082-447d-82e7-6388849af9c1
+        stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: ORDER_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 19ba52d3-da6e-40db-be5a-c1ead148accb
+          stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 4483432f-2a35-4a2d-87a0-1ea510cb3fb3
+        stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: PRODUCT_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 6ce10f8f-6abe-4f5d-b71e-1a9488a9a266
+          stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 692d9828-6c00-41e9-a9aa-5cb5717ed07b
+        stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: QUANTITY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 60522108-3b56-43a4-a31b-2a93b64e77a3
+          stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: d25bce83-a44a-480f-a5ab-cdc9637d11af
+        stepCounter: 89fd5eb0-9385-44ff-a2ab-ac186b51b456
+      config: {}
+      dataType: NUMBER(10,2)
+      description: ''
+      name: UNIT_PRICE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 85704915-9597-461d-b7ba-99dd60337101
+          stepCounter: 045b7455-12ab-4b34-9dc3-076b04f12617
+        transform: ''
+    cteString: ''
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases:
+        STG_ORDER_ITEM_AI: 045b7455-12ab-4b34-9dc3-076b04f12617
+      customSQL:
+        customSQL: ''
+      dependencies:
+      - locationName: TARGET
+        nodeName: STG_ORDER_ITEM_AI
+      join:
+        joinCondition: FROM {{ ref('TARGET', 'STG_ORDER_ITEM_AI') }} "STG_ORDER_ITEM_AI"
+      name: STG_ORDER_ITEM_DETAILS_AI
+      noLinkRefs: []
+  name: STG_ORDER_ITEM_DETAILS_AI
+  overrideSQL: false
+  schema: ''
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

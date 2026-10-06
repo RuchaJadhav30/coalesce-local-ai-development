@@ -1,0 +1,110 @@
+fileVersion: 1
+id: 94757eb7-a78a-49f0-8460-85ef7dc188ce
+name: STG_CUSTOMER_AI
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ''
+    preSQL: ''
+    testsEnabled: true
+    truncateBefore: true
+  database: ''
+  deployEnabled: true
+  description: Pass-through stage of CUSTOMERS
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 0b6f0684-00dc-4ad1-8be3-17e07d85edbd
+        stepCounter: 94757eb7-a78a-49f0-8460-85ef7dc188ce
+      config: {}
+      dataType: NUMBER(10,0)
+      description: ''
+      name: CUSTOMER_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: f1ea2873-fcdd-4d58-80dc-dd62bbf5d578
+          stepCounter: 4874a405-faad-4c59-88ab-4deecee84f8f
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 9f8fbf0d-f758-4173-aeee-6dc0421e0cbc
+        stepCounter: 94757eb7-a78a-49f0-8460-85ef7dc188ce
+      config: {}
+      dataType: VARCHAR(100)
+      description: ''
+      name: CUSTOMER_NAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 17a38699-c51d-4acb-8d44-30f835447880
+          stepCounter: 4874a405-faad-4c59-88ab-4deecee84f8f
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 69031471-6f6e-48a1-9a82-e487e328ab39
+        stepCounter: 94757eb7-a78a-49f0-8460-85ef7dc188ce
+      config: {}
+      dataType: VARCHAR(50)
+      description: ''
+      name: CITY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: f8b58c9a-adc8-4945-94da-ffefb35a99f5
+          stepCounter: 4874a405-faad-4c59-88ab-4deecee84f8f
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 7ec0a378-a87b-42c9-a5ab-03ca9f9944bb
+        stepCounter: 94757eb7-a78a-49f0-8460-85ef7dc188ce
+      config: {}
+      dataType: VARCHAR(150)
+      description: ''
+      name: EMAIL
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 7f7de987-d075-47a9-b41b-daa53c6e6ae4
+          stepCounter: 4874a405-faad-4c59-88ab-4deecee84f8f
+        transform: ''
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: ca7cd3b3-ff2b-48f9-9036-6ae3766508ba
+        stepCounter: 94757eb7-a78a-49f0-8460-85ef7dc188ce
+      config: {}
+      dataType: DATE
+      description: ''
+      name: CREATED_DATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: dc272c93-74b5-4d10-b06b-a4d1d8a8289a
+          stepCounter: 4874a405-faad-4c59-88ab-4deecee84f8f
+        transform: ''
+    cteString: ''
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases:
+        CUSTOMERS: 4874a405-faad-4c59-88ab-4deecee84f8f
+      customSQL:
+        customSQL: ''
+      dependencies:
+      - locationName: SRC
+        nodeName: CUSTOMERS
+      join:
+        joinCondition: FROM {{ ref('SRC', 'CUSTOMERS') }} "CUSTOMERS"
+      name: STG_CUSTOMER_AI
+      noLinkRefs: []
+  name: STG_CUSTOMER_AI
+  overrideSQL: false
+  schema: ''
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
