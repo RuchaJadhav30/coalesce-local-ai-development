@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "coalesce-transform": {
+      "type": "http",
+      "url": "https://app.coalescesoftware.io/api/v1/mcp",
+      "headers": {
+        "Authorization": "Bearer ${COALESCE_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

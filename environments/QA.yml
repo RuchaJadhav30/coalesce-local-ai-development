@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "20"
+name: QA
+type: Environment
+mappingDefinitions:
+  SRC:
+    database: COALESCE_LOCAL_AI_DEV
+    schema: DEV
+  TARGET:
+    database: COALESCE_LOCAL_AI_DEV
+    schema: QA
