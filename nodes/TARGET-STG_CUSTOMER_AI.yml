@@ -10,7 +10,7 @@ operation:
     truncateBefore: true
   database: ''
   deployEnabled: true
-  description: Pass-through stage of CUSTOMERS
+  description: Pass-through stage of CUSTOMERS (QA redeploy test v2)
   isMultisource: false
   locationName: TARGET
   materializationType: table
