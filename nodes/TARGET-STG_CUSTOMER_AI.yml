@@ -44,7 +44,7 @@ operation:
           - columnReferences:
               - columnCounter: 17a38699-c51d-4acb-8d44-30f835447880
                 stepCounter: 4874a405-faad-4c59-88ab-4deecee84f8f
-            transform: "\"CUSTOMERS\".CUSTOMER_NAME_BROKEN"
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 69031471-6f6e-48a1-9a82-e487e328ab39
