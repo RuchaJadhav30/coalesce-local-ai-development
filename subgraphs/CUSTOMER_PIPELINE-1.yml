@@ -1,0 +1,8 @@
+fileVersion: 1
+id: "1"
+name: CUSTOMER_PIPELINE
+steps:
+  - 4874a405-faad-4c59-88ab-4deecee84f8f
+  - 88384866-2a31-44b8-92bd-17dd0a224191
+  - 94757eb7-a78a-49f0-8460-85ef7dc188ce
+type: Subgraph

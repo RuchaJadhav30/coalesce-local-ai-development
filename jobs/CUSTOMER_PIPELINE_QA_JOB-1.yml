@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "1"
+includeSelector: "{ subgraph: \"CUSTOMER_PIPELINE\" }"
+name: CUSTOMER_PIPELINE_QA_JOB
+type: Job
