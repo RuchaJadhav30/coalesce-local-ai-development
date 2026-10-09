@@ -1,0 +1,10 @@
+config:
+  entities:
+    nodeTypes: {}
+  packageVariables: ""
+fileVersion: 1
+id: "@coalesce/snowflake/base-node-types-sql"
+name: BaseNodeTypes
+packageID: "@coalesce/snowflake/base-node-types-sql"
+releaseID: 5251a638-180d-4abf-b3e6-3e3fd321f71a
+type: Package
